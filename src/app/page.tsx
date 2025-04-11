@@ -44,9 +44,9 @@ export default function Home() {
 
   return (
     
-    <section id="about" className={` w-[100%] transition-colors duration-300 h-screen ${theme === 'dark' ? 'dark' : 'light'}`}>
+    <section id="about" className={` w-[100%]  transition-colors duration-300 h-screen ${theme === 'dark' ? 'dark' : 'light'}`}>
 
-      <section id="aboutme" className={` lg:p-20   flex flex-col justify-center pb-21 transition-colors duration-300 ${theme === 'dark' ? 'dark' : 'light'} gap-10 items-center lg:h-screen `}>
+      <section id="aboutme" className={` lg:p-20  w-[100%]  flex flex-col justify-center pb-21 transition-colors  duration-300 ${theme === 'dark' ? 'dark' : 'light'} gap-10 items-center lg:h-screen `}>
         
 
         <div className="flex lg:flex-row lg:p-0 pt-30 items-center flex-col gap-10">
@@ -70,7 +70,8 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className="flex  text-[#9538F2] text-3xl gap-10 items-center justify-center w-[46rem]">
+        <div className="flex  text-[#9538F2] text-3xl gap-10 items-center justify-center w-full">
+
           <a className="hover:scale-150 transform duration-300" target="_blank" href="https://www.linkedin.com/in/laislimasampaio/"><FaLinkedin /></a> 
           <a className="hover:scale-150 transform duration-300" target="_blank" href="https://github.com/LaisLimaSampaio"><FaGithub /></a>
           <a 
@@ -83,7 +84,7 @@ export default function Home() {
         </div>
         
       </section>
-      <section id="education" className={` flex justify-center items-center transition-colors duration-300  p-10 ${theme === 'dark' ? 'dark' : 'light'}`}>
+      <section id="education" className={`w-[100%] flex justify-center items-center transition-colors duration-300  p-10 ${theme === 'dark' ? 'dark' : 'light'}`}>
         <div className="flex justify-start items-start flex-col gap-8">
           <div className={`flex flex-row gap-2 justify-center items-start`}>
             <div className="flex p-1 items-center justify-start">
@@ -233,7 +234,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="projects" className={`transition-colors duration-300 pb-20 lg:p-30 ${theme === 'dark' ? 'dark' : 'light'} `}>
+      <section id="projects" className={`w-full transition-colors duration-300 pb-20 lg:p-30 ${theme === 'dark' ? 'dark' : 'light'} `}>
         <Cabecalho titulo="Projetos"/>
 
         <div className={` text-center color-font-branco-50 lg:text-xl pt-9`}>Explore meus projetos acadêmicos recentes</div>
@@ -245,7 +246,7 @@ export default function Home() {
           </div>  
 
       </section>
-      <section id="contact" className={`flex flex-col justify-center items-center w-full h-screen`}>
+      <section id="contact" className={`w-full flex flex-col justify-center items-center w-full h-screen`}>
             <ParticlesBackground />
             <Contatos />
       </section>

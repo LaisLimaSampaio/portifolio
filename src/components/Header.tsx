@@ -52,7 +52,7 @@ export default function Header() {
     ];
 
     return (
-        <header className={`fixed z-10 w-[70%] left-1/2 transform -translate-x-1/2 m-7 flex justify-between items-center bg-amber-900 rounded-full px-10 py-4 transition-colors duration-300 ${theme === 'dark' ? 'dark' : 'light'}`}>
+        <header className={`fixed z-10 w-[70%] left-1/2 transform -translate-x-[54%] m-7 flex justify-between items-center bg-amber-900 rounded-full px-10 py-4 transition-colors duration-300 ${theme === 'dark' ? 'dark' : 'light'}`}>
 
             <button 
                 onClick={() => setMenuOpen(!menuOpen)}
