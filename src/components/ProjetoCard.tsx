@@ -15,8 +15,10 @@ export default function ProjetoCard({projeto}:{projeto:Projeto}){
             flex flex-col 
              bg-opacity-30 
             rounded-[8px] overflow-hidden
-            w-[25rem] 
-            h-[20rem] 
+            lg:w-[25rem] 
+            lg:h-[20rem] 
+            w-[20rem]
+            h-[20rem]
             transition-colors duration-300`}>
 
             <div className={`relative h-[20rem] w-full group `}>
@@ -38,7 +40,7 @@ export default function ProjetoCard({projeto}:{projeto:Projeto}){
                 </div>
             </div>
 
-            <div className={`flex flex-col p-5 h-[50%] gap-5 text-[12px]`}>
+            <div className={`flex flex-col p-2 gap-3 lg:p-5 h-[50%] lg:gap-5 text-[10px] lg:text-[12px]`}>
 
                 <p className="font-bold text-[14px]">{projeto.titulo}</p>
 
