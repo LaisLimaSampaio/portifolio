@@ -15,11 +15,11 @@ export const metadata = {
   openGraph: {
     title: 'Laís Lima Sampaio | Desenvolvedora de Software',
     description: 'Veja os projetos desenvolvidos por Laís e conheça mais sobre sua trajetória como futura engenheira de software.',
-    url: '', // coloque a URL real aqui
+    url: 'https://portifolio-lais.vercel.app', // coloque a URL real aqui
     siteName: 'Portfólio Laís Sampaio',
     images: [
       {
-        url: 'https://lais.dev/anime.png', // imagem hospedada (pode ser da pasta /public)
+        url: 'https://portifolio-lais.vercel.app/anime.png', // imagem hospedada (pode ser da pasta /public)
         width: 1200,
         height: 630,
         alt: 'Imagem do portfólio de Laís Lima Sampaio',
@@ -32,7 +32,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Laís Lima Sampaio | Desenvolvedora de Software',
     description: 'Conheça o portfólio de Laís, com projetos em Java, React, e muito mais.',
-    images: ['https://lais.dev/anime.png'], // mesma imagem ou outra se quiser
+    images: ['https://portifolio-lais.vercel.app/anime.png'], // mesma imagem ou outra se quiser
   },
 };
 export default function RootLayout({
