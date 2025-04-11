@@ -43,7 +43,7 @@ export default function RootLayout({
   return (
     <ThemeProvider>
       <html lang="en">
-      <body className={`${lato.className} antialiased black-bg color-font-branco `}>
+      <body className={`${lato.className} overflow-x-hidden antialiased black-bg color-font-branco `}>
         <Toaster position="top-center" reverseOrder={false} />
         <Header/>
         {children}

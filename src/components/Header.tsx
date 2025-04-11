@@ -90,7 +90,7 @@ export default function Header() {
                                 >
                                     <button
                                         onClick={() => handleHashNavigation(item.href)}
-                                        className="font-bold text-2xl text-white hover:text-[#021D40] transition-colors block py-2 w-full text-left"
+                                        className="font-bold text-2xl text-white hover:text-[#021D40] transition-colors block py-2 w-full text-left cursor-pointer"
                                     >
                                         {item.name}
                                     </button>

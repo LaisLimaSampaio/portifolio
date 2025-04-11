@@ -44,9 +44,9 @@ export default function Home() {
 
   return (
     
-    <section id="about" className={` transition-colors duration-300 h-screen ${theme === 'dark' ? 'dark' : 'light'}`}>
+    <section id="about" className={` w-[100%] transition-colors duration-300 h-screen ${theme === 'dark' ? 'dark' : 'light'}`}>
 
-      <section id="aboutme" className={` lg:p-20  flex flex-col justify-center pb-21 transition-colors duration-300 ${theme === 'dark' ? 'dark' : 'light'} gap-10 items-center lg:h-screen `}>
+      <section id="aboutme" className={` lg:p-20   flex flex-col justify-center pb-21 transition-colors duration-300 ${theme === 'dark' ? 'dark' : 'light'} gap-10 items-center lg:h-screen `}>
         
 
         <div className="flex lg:flex-row lg:p-0 pt-30 items-center flex-col gap-10">
@@ -117,7 +117,7 @@ export default function Home() {
 
       
 
-      <section id="skills" className={`flex flex-col w-full h-[90vh] transition-colors duration-300 lg:p-0 p-2 ${theme === 'dark' ? 'dark' : 'light'}`}>
+      <section id="skills" className={`flex flex-col w-full h-[90vh] transition-colors duration-300 lg:p-0 p-5 ${theme === 'dark' ? 'dark' : 'light'}`}>
 
 
         <div className="lg:ml-30">
@@ -125,7 +125,7 @@ export default function Home() {
         </div>
         
 
-        <div className={`flex items-center gap-20 lg:justify-between w-full h-[70vh] lg:px-90 lg:gap-0 `}>
+        <div className={`flex  items-center gap-10 lg:justify-between w-full h-[70vh] lg:px-90 lg:gap-0 `}>
 
           <div className="flex flex-col gap-0 rounded-lg lg:overflow-hidden ">
             <button 
