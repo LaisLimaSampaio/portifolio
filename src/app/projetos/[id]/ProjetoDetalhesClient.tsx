@@ -1,16 +1,22 @@
 'use client'
 
-import { Projeto } from '@/interfaces/Projeto'
+import { useParams } from 'next/navigation'
+import { projetos } from '@/data/projetos'
 import Image from 'next/image'
 import Link from 'next/link'
 import { FaArrowLeft, FaGithub } from 'react-icons/fa'
 
-export default function ProjetoDetalhesClient({ projeto }: { projeto: Projeto }) {
+export default function ProjetoDetalhesClient() {
+  const params = useParams()
+  const projeto = projetos.find(proj => proj.id === params.id)
+
+  if (!projeto) return <p className="text-center text-red-600 mt-10">Projeto não encontrado.</p>
+
   return (
     <div className="min-h-screen mt-7 px-6 pb-10 pt-24 md:px-16">
       <Link
         href="/#projetos"
-        className="text-[#9538F2] hover:text-[#8528E2] w-50  flex items-center gap-2 p-3.5 cursor-pointer"
+        className="text-[#9538F2] hover:text-[#8528E2] w-50 flex items-center gap-2 p-3.5 cursor-pointer"
       >
         <FaArrowLeft /> Voltar para projetos
       </Link>
@@ -73,25 +79,21 @@ export default function ProjetoDetalhesClient({ projeto }: { projeto: Projeto })
             Sistema de gerenciamento de produtos de um mercado, feito com HTML, CSS e JavaScript. Permite operações CRUD e persistência em LocalStorage.
           </p>
         )}
-
         {projeto.id === '2' && (
           <p className="text-gray-700 dark:text-gray-300">
             API REST em Spring Boot com autenticação JWT e banco em memória (H2). Simula fluxo Kanban com controle de tarefas.
           </p>
         )}
-
         {projeto.id === '3' && (
           <p className="text-gray-700 dark:text-gray-300">
             Um gerenciador de tarefas em React com Tailwind, usando hooks e estados para criar, concluir e excluir tarefas.
           </p>
         )}
-
         {projeto.id === '4' && (
           <p className="text-gray-700 dark:text-gray-300">
             Jogo da forca rodando no terminal, com comunicação cliente-servidor via sockets TCP/IP usando Java.
           </p>
         )}
-
         {projeto.id === '5' && (
           <p className="text-gray-700 dark:text-gray-300">
             API para sistema de suporte técnico, com funcionalidades CRUD usando Spring Boot e banco H2.
