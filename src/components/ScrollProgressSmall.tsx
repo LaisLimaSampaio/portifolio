@@ -7,7 +7,7 @@ export default function ScrollProgressSmall() {
   const { theme } = useTheme();
   
  
-  const width = useTransform(scrollYProgress, [0, 0.8], ["0%", "100%"], {
+  const width = useTransform(scrollYProgress, [0, 0.8], ["50%", "100%"], {
     clamp: true 
   });
   return (

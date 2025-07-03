@@ -4,6 +4,7 @@ import { useState } from "react"
 import { useTheme } from "@/app/ThemeProvider";
 import toast from 'react-hot-toast'
 import emailjs from '@emailjs/browser'
+import { VscDebugBreakpointFunctionUnverified } from "react-icons/vsc";
 
 export default function Contatos(){
     const [name, setName] = useState('')
@@ -86,8 +87,13 @@ export default function Contatos(){
     const titleColor = theme === 'dark' ? 'text-white' : 'text-black';
 
     return (
-        <div className="flex flex-col mt-20 justify-center items-center w-full px-4 sm:px-8 md:px-16 lg:px-24 xl:px-36 py-10 gap-9">
-            <h1 className={`text-3xl sm:text-4xl font-bold ${titleColor}`}>Contate-me</h1>
+        <div className="flex flex-col justify-center items-center w-full px-4 sm:px-8 md:px-16 lg:px-24 xl:px-36  gap-9">
+
+            <div className="flex text-center justify-center items-center align-middle w-[100%] ">
+                <VscDebugBreakpointFunctionUnverified className="text-[#9538F2] text-[2rem]"/>
+                <p className="text-[#9538F2]">CONTACT</p>
+            </div>
+            <h1 className={`w-[100%] text-center sm:text-2xl font-bold ${titleColor}`}>Vamos conversar? Conecte-se comigo e compartilhe sua ideia.</h1>
 
             <form 
                 onSubmit={(e)=>sendEmail(e)}

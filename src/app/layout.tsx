@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import { ThemeProvider } from "./ThemeProvider";
 import { Toaster } from 'react-hot-toast'
+import ParticlesBackground from "@/components/ParticlesBackground";
 
 
 
@@ -43,7 +44,8 @@ export default function RootLayout({
   return (
     <ThemeProvider>
       <html lang="en">
-      <body className={`${lato.className} overflow-x-hidden antialiased black-bg color-font-branco `}>
+      <body className={`${lato.className}  overflow-x-hidden antialiased black-bg color-font-branco `}>
+        <ParticlesBackground />
         <Toaster position="top-center" reverseOrder={false} />
         <Header/>
         {children}

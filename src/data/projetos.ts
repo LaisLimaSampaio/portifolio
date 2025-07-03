@@ -24,16 +24,7 @@ export const projetos: Projeto[] = [
     fronted: false
   },
 
-  {
-    id: "3",
-    titulo: "Gerenciador de Tarefas",
-    descricao: "Um gerenciador de tarefas CRUD em React, permitindo criar, visualizar e excluir tarefas de forma intuitiva.",
-    tecnologias: ["React", "JavaScript", "CSS"],
-    imagem: "/gerenciadorTarefas.png",
-    linkDemo: "https://task-manager-react-gilt.vercel.app/",
-    linkRepo: "https://github.com/LaisLimaSampaio/Task-Manager-React",
-    fronted: true
-  },
+  
   {
     id: "4",
     titulo: "Jogo da Forca com Comunicação via Socket",

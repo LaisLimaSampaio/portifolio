@@ -48,13 +48,20 @@ export default function Header() {
         { name: "Sobre mim", href: "#about" },
         { name: "Habilidades", href: "#skills" },
         { name: "Projetos", href: "#projects" },
-        { name: "Contact-me", href: "#contact" }
+        { name: "Contate-me", href: "#contact" }
     ];
-
+//        <header className={`fixed z-10 w-[70%] left-1/2 transform -translate-x-[54%] m-7 flex justify-between items-center bg-amber-900 rounded-full px-10 py-4 transition-colors duration-300 ${theme === 'dark' ? 'dark' : 'light'}`}>
     return (
-        <header className={`fixed z-10 w-[70%] left-1/2 transform -translate-x-[54%] m-7 flex justify-between items-center bg-amber-900 rounded-full px-10 py-4 transition-colors duration-300 ${theme === 'dark' ? 'dark' : 'light'}`}>
+        <header className={`fixed text-center top-0 left-0 py-9 w-full z-50 flex px-20 lg:px-60 justify-between items-center transform transition-colors duration-300`}>
 
-            <button 
+            <ul className="hidden font-bold lg:flex md:hidden sm:hidden bg-gradient-to-r from-[#9538F2] via-[#7663F2] to-[#05AFF2] px-7 text-[17px] py-4 gap-9 rounded-2xl">
+                {menuItems.map((item)=> (
+                    <li className="cursor-pointer ease-in transition-transform duration-[100ms]
+ hover:scale-105" key={item.href} onClick={() => handleHashNavigation(item.href)}>{item.name}</li>
+                ))}
+            </ul>
+            <button
+                className="cursor-pointer lg:hidden " 
                 onClick={() => setMenuOpen(!menuOpen)}
                 aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
             >
@@ -78,7 +85,7 @@ export default function Header() {
                         animate="visible"
                         exit="hidden"
                         variants={menuVariants}
-                        className="bg-[#7663F2] h-76 w-50 flex flex-col fixed top-2/12 z-50 rounded-2xl mt-10"
+                        className="bg-[#7663F2] m-7 h-76 w-50 flex flex-col fixed top-2/12 z-50 rounded-2xl mt-10 lg:hidden"
                     >
                         <motion.ul className="w-full h-full flex flex-col justify-between p-5">
                             {menuItems.map((item) => (
@@ -106,7 +113,7 @@ export default function Header() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
                 aria-label="Alternar tema"
-                className="color-font-branco-50"
+                className="cursor-pointer color-font-branco-50"
                 onClick={toggleTheme}
             >
                 {theme === 'light' ? (

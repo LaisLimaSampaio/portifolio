@@ -3,6 +3,15 @@
 
 body {
   font-family: 'Lato', sans-serif;
+  margin:0px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  height: 100vh;
+  margin: 0px;
+  
+
 }
 
 .black-bg{
@@ -32,6 +41,34 @@ body {
   background-color:#121212;
   color: #F0F0F0;
 }
+.swiper-button-prev-custom,
+.swiper-button-next-custom {
+  color: #9538F2;
+  font-size: 9rem;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-button-prev-custom::after,
+.swiper-button-next-custom::after {
+  content: '';
+  border: solid currentColor;
+  border-width: 0 3px 3px 0;
+  padding: 9px;
+  display: inline-block;
+}
+
+.swiper-button-prev-custom::after {
+  transform: rotate(135deg);
+}
+
+.swiper-button-next-custom::after {
+  transform: rotate(-45deg);
+}
+
 
 .color-font-preto{
   color: #121212;
@@ -46,4 +83,22 @@ body {
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+/* Animação de flutuação */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+
+.floating {
+  animation: float 3s ease-in-out infinite;
 }
