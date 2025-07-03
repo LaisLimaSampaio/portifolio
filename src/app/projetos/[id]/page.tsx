@@ -2,9 +2,7 @@ import { projetos } from '@/data/projetos'
 import { notFound } from 'next/navigation'
 import ProjetoDetalhesClient from './ProjetoDetalhesClient'
 
-interface Props {
-  params: { id: string }
-}
+
 
 export async function generateStaticParams() {
   return projetos.map((projeto) => ({
@@ -12,7 +10,8 @@ export async function generateStaticParams() {
   }))
 }
 
-export default async function ProjetoPage({ params }: Props) {
+export default function ProjetoPage({ params }: { params: { id: string } }) {
+  
   const projeto = projetos.find((p) => p.id === params.id)
 
   if (!projeto) return notFound()
